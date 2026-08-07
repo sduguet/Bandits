@@ -1,0 +1,39 @@
+/*/*/*/*/*/*/
+regles 3 joueurs :
+50 cartes :
+	- 40 cartes de 1 à 10 dans 4 couleurs différentes (pique, trèfle, coeur, carreau)
+	- 8 jokers (numérotés de 1+ à 8+)
+	- 2 cartes rôles brigand
+
+Mise en place :
+sur les 48 cartes (chiffres + jokers) on en retire 2, puis on ajoute les 2 cartes rôles
+On distribu 16 cartes à chaque joueurs
+	si un joueurs à les 2 cartes brigands on redonne
+	les 2 joueurs ayant la carte brigand veulent avoir le plus de pli, celui qui ne la pas veut le moins de pli.
+Les joueurs sélectionnent 2 cartes à donner à leur voisin de gauche, puis ils se les échangent simultanément. Si un joueurs à 3 jokers ou plus, il est obliger d'en donner au moins 1 dans son échange. La carte rôle peut etre donnée pendant l'échange.
+
+Une partie se déroule en 13 plis, jusqu'à ce qu'il ne reste plus que 3 carte à chaque joueurs.
+Il est IMPOSSIBLE de jouer la carte rôle.
+Le premier joueur est choisi au hasard.
+Le premier joueur joue n'importe quelle carte de sa main face visible :
+	- si c'est une carte de couleur, les autres joueurs doivent jouer cette couleur ou un joker. s'ils n'ont pas la couleur demandée, il peuvent joueur n'importe quelle autre carte (hormis la carte rôle).
+	- si c'est une carte joker, il annone une couleur, les prochains joueurs doivent jouer cette couleur obligatoirement s'ils l'ont, sinon ils peuvent jouer n'impote quoi d'autre (hormis la carte rôle). Un effet va etre déclenché en fonction de la première carte couleur qui va etre jouée, en fonction de la liste en dessous :
+♣ : tous les joueurs donnes 2 cartes à leur voisin de gauche ou de droite (le joueur qui gagne le pli décide du sens), puis on change de sens
+♠ : le gagnant du pli vole un pli a celui qui veux, puis on change de sens
+♦ : le gagnant du pli prend une carte au hasard chez quelqu'un et on lui donne une de nos carte, puis on change de sens
+♥ : on reset le prio des couleurs, puis on change de sens
+
+Si le 2e joueurs joue lui aussi un joker, on jouera le pouvoir de la couleur de la carte du 3e joueur. Si le 3e joueur joue lui aussi un joker, rien ne se passe.
+Lorsque un joker est joué, uniquement les numéros compte pour savoir qui remorte le plis (sauf en cas d'égalité entre 2 couleur ex : joker 4, 6 cœur et 6 pique joué, on regarde l'orde des couleur pour savoir)
+
+Si le premier joueur débute par une couleur et que le joueur numéro 2 ou 3 joue un joker, le pouvoir effectué sera celui de la couleur du premier joueur.
+
+Ordre des couleurs :
+Les couleurs ne sont pas classées au début de la partie, c'est en cours de manche que leur rang sera défini.
+La première couleurs à apparaitre acquiert automatiquement le rang le plus faible. On placera un jetons pour servir d'indicateur. La prochaine couleurs prendra la place numéro 2, puis 3 et ensuite 4.
+
+
+Décompte des points :
+Si on a le plus de pli et qu'on est brigand à la fin de la partie on marque 1 point, si on a les 2 cartes brigand on marque 2 points.
+Si on a pas de carte brigand et qu'on a le moins de pli on gagne 1 point.
+

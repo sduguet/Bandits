@@ -1,0 +1,22 @@
+{
+  "name": "brigands",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Jeu de plis multijoueur à trois joueurs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node tests/rule-priority.js && node tests/online-smoke.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "socket.io-client": "^4.8.1"
+  }
+}

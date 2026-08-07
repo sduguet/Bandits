@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101713">
+  <meta name="description" content="Brigands — jeu de plis multijoueur en ligne pour trois joueurs.">
+  <title>Brigands — Multijoueur en ligne</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="online-theme.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Retour à l’accueil">
+      <span class="brand-mark">B</span>
+      <span><strong>Brigands</strong><small>Multijoueur en ligne</small></span>
+    </a>
+    <div class="top-actions">
+      <span class="connection-pill" id="connectionStatus">Connexion…</span>
+      <button class="quiet-button hidden" id="leaveButton">Quitter</button>
+    </div>
+  </header>
+  <main id="onlineApp" aria-live="polite"></main>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="online.js"></script>
+</body>
+</html>
