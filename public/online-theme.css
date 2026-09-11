@@ -60,9 +60,22 @@
     overflow: hidden
 }
 
+.form__group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    img {
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
 .room-panel h2 {
     font: 700 22px "Silkscreen";
-    margin: 0 0 5px
+    margin: 0;
 }
 
 .room-panel>p {
